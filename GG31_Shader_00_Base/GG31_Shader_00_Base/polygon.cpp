@@ -66,6 +66,13 @@ void CPolygon::Init()
 	//Load PixelShaderFile & Create Object
 	CRenderer::CreatePixelShader(&m_PixelShader, "unlitColorPS.cso");
 
+
+	//For Nvidia 
+	//頂点シェーダーオブジェクトのセット
+	CRenderer::GetDeviceContext()->VSSetShader(m_VertexShader, NULL, 0);
+	//ピクセルシェーダーオブジェクトのセット
+	CRenderer::GetDeviceContext()->PSSetShader(m_PixelShader, NULL, 0);
+
 }
 
 
@@ -96,7 +103,6 @@ void CPolygon::Draw()
 
 
 	//ここにシェーダー関連の描画準備を追加
-
 	//インプットレイアウトのセット（DirectXへ頂点の構造を教える）
 	CRenderer::GetDeviceContext()->IASetInputLayout(m_VertexLayout);
 	//頂点シェーダーオブジェクトのセット

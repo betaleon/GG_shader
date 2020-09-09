@@ -82,6 +82,7 @@ void CField::Update()
 
 void CField::Draw()
 {
+	return;
 
 	// マトリクス設定
 	D3DXMATRIX world, scale, rot, trans;

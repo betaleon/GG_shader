@@ -21,8 +21,12 @@ void main(in VS_IN In, out PS_IN Out)
 
 	//頂点カラー
 	Out.Diffuse = In.Diffuse;
+	Out.Diffuse = float4(1.0f,0.0f,0.0f,1.0f);
 
-	//テクスチャ座標
+
+
+
+	//テクスチャ座標を出力
 	Out.TexCoord = In.TexCoord;
 
 

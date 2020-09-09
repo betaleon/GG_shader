@@ -166,7 +166,7 @@ void CRenderer::Init()
 
 
 
-
+	//テクスチャ画像の使い方の設定
 	// サンプラーステート設定
 	D3D11_SAMPLER_DESC samplerDesc;
 	ZeroMemory( &samplerDesc, sizeof( samplerDesc ) );

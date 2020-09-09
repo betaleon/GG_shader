@@ -55,6 +55,7 @@ void CPlayer::Update()
 
 void CPlayer::Draw()
 {
+	return;
 
 	// マトリクス設定
 	D3DXMATRIX world, scale, rot, trans;

@@ -81,7 +81,7 @@ void CManager::Draw()
 	light.Diffuse = D3DXCOLOR( 1.0f, 1.0f, 1.0f, 1.0f );
 	CRenderer::SetLight(light);
 
-	g_Field->Draw();
+	//g_Field->Draw();
 
 	g_Player->Draw();
 
