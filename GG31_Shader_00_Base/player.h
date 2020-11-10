@@ -1,6 +1,6 @@
 #pragma once
 
-#define SHADER_MAX 4
+#define SHADER_MAX 5
 
 class CPlayer
 {

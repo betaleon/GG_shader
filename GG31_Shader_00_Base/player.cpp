@@ -19,7 +19,8 @@ void CPlayer::Init()
 		"unlitColorVS.cso",
 		"vertexLightingVS.cso",	
 		"pixelLightingVS.cso",
-		"pixelLightingVS.cso"
+		"pixelLightingVS.cso",
+		"pixelLightingVS.cso",
 	};
 
 	//ピクセルシェーダのファイル名
@@ -27,7 +28,8 @@ void CPlayer::Init()
 		"unlitColorPS.cso",
 		"vertexLightingPS.cso",
 		"pixelLightingPS.cso",
-		"pixelLightingBlinnPS.cso"
+		"pixelLightingBlinnPS.cso",
+		"pixelLightingRimPS.cso"
 	};
 
 	for (int i = 0; i < SHADER_MAX; i++)
