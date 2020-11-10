@@ -21,27 +21,13 @@ void main(in PS_IN In, out float4 outDiffuse : SV_Target)
 	//				フォン鏡面反射				  //
 	//--------------------------------------------//
 	//法線で向きを表す面で反射したベクトルの計算
-	//float3 refv = reflect(Light.Direction.xyz, normal.xyz);	//光の反射ベクトルを計算
-	//refv = normalize(refv);	//正規化する
-	//
-	//float specular = -dot(eyev, refv);	//鏡面反射の計算
-	//specular = saturate(specular);		//値をサチュレート
-	//specular = pow(specular, 50);		//ここでは30乗してみる
-	//
-	//outDiffuse.rgb += specular;	//スペキュラをディフューズとして足しこむ
-
-	//--------------------------------------------//
-	//			  ブリンフォン鏡面反射			  //
-	//--------------------------------------------//
-	//ハーフベクトルの作成
-	float3 halfv = eyev + Light.Direction.xyz;
-	halfv = normalize(halfv);
+	float3 refv = reflect(Light.Direction.xyz, normal.xyz);	//光の反射ベクトルを計算
+	refv = normalize(refv);	//正規化する
 	
-	float specular = -dot(halfv, normal.xyz); //ハーフベクトルと法線の内積を計算
-	specular = saturate(specular);
-	specular = pow(specular, 30);
-
+	float specular = -dot(eyev, refv);	//鏡面反射の計算
+	specular = saturate(specular);		//値をサチュレート
+	specular = pow(specular, 50);		//ここでは30乗してみる
+	
 	outDiffuse.rgb += specular;	//スペキュラをディフューズとして足しこむ
 
-
-	}
+}

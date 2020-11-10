@@ -24,24 +24,24 @@ void main(in PS_IN In, out float4 outDiffuse : SV_Target)
 
 	//グレースケール(ピクセルを明度0~1で表す)
 	//R:G:B = 3:6:1　くらいの割合で合成する
-	/*outDiffuse = TEXTURECOLOR;
+	outDiffuse = TEXTURECOLOR;
 	outDiffuse = 
 		0.299*outDiffuse.r +
 		0.587*outDiffuse.g +
-		0.114*outDiffuse.b;*/
+		0.114*outDiffuse.b;
 
 	//セピア変換
-	outDiffuse = TEXTURECOLOR;
-	outDiffuse = 0.299 * outDiffuse.r + 0.587 * outDiffuse.g + 0.114 * outDiffuse.b;
-	float4 sepia = float4(1.07, 0.74, 0.43, 1.0f);
-	outDiffuse *= sepia;
+	//outDiffuse = TEXTURECOLOR;
+	//outDiffuse = 0.299 * outDiffuse.r + 0.587 * outDiffuse.g + 0.114 * outDiffuse.b;
+	//float4 sepia = float4(1.07, 0.74, 0.43, 1.0f);
+	//outDiffuse *= sepia;
 
 
 	//RGBの色を入れ替える
-	/*float4 color = TEXTURECOLOR;
-	outDiffuse.r = color.b;
-	outDiffuse.g = color.g;
-	outDiffuse.b = color.r;*/
+	//float4 color = TEXTURECOLOR;
+	//outDiffuse.r = color.b;
+	//outDiffuse.g = color.g;
+	//outDiffuse.b = color.r;
 
 
 

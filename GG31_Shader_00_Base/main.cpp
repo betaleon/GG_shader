@@ -5,7 +5,7 @@
 
 
 const char* CLASS_NAME = "AppClass";
-const char* WINDOW_NAME = "DX11ÉQÅ[ÉÄ";
+const char* WINDOW_NAME = "AT13E101_03_î¬ã¥â¿ëø";
 
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
