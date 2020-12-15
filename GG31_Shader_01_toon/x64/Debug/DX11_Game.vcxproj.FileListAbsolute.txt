@@ -1,0 +1,2 @@
+C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_01_toon\x64\Debug\DX11_Game.exe
+C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_01_toon\x64\Debug\DX11_Game.pdb

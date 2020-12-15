@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\DX11_Game.exe</ProjectOutputs>
+  <ContentFiles>C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\normalMappingPS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\normalMappingVS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\pixelLightingBlinnPS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\pixelLightingPS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\pixelLightingRimPS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\pixelLightingVS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\pomapping_PS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\pomapping_VS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\unlitColorPS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\unlitColorVS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\vertexLightingPS.cso;C:\Users\板橋佳汰\Desktop\GG_shader\GG31_Shader_00_Base\vertexLightingVS.cso</ContentFiles>
+  <SatelliteDlls></SatelliteDlls>
+  <NonRecipeFileRefs></NonRecipeFileRefs>
+</Project>

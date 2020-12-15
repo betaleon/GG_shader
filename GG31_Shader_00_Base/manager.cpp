@@ -2,6 +2,8 @@
 #include "manager.h"
 #include "renderer.h"
 #include "input.h"
+#include "debugimgui.h"
+#include "imgui.h"
 #include "polygon.h"
 #include "field.h"
 #include "camera.h"
@@ -16,6 +18,7 @@ CPlayer*		g_Player;
 void CManager::Init()
 {
 	CRenderer::Init();
+	CDebugGui::Init();
 	CInput::Init();
 
 	g_Polygon = new CPolygon();
@@ -48,6 +51,7 @@ void CManager::Uninit()
 
 
 	CInput::Uninit();
+	CDebugGui::Finalize();
 	CRenderer::Uninit();
 
 }
@@ -55,6 +59,7 @@ void CManager::Uninit()
 void CManager::Update()
 {
 	CInput::Update();
+	CDebugGui::Update();
 
 
 	g_Camera->Update();
@@ -70,12 +75,13 @@ void CManager::Update()
 void CManager::Draw()
 {
 	CRenderer::Begin();
+	CDebugGui::Begin();
 
 	g_Camera->Draw();
 
 	LIGHT light;
 	light.Enable = true;
-	light.Direction = D3DXVECTOR4( 1.0f, -1.0f, 1.0f, 0.0f );
+	light.Direction = D3DXVECTOR4( 1.0f, -0.5f, 0.0f, 0.0f );
 	D3DXVec4Normalize( &light.Direction, &light.Direction );
 	light.Ambient = D3DXCOLOR( 0.1f, 0.1f, 0.1f, 1.0f );
 	light.Diffuse = D3DXCOLOR( 1.0f, 1.0f, 1.0f, 1.0f );
@@ -90,5 +96,11 @@ void CManager::Draw()
 
 	g_Polygon->Draw();
 
+	ImGui::SetNextWindowPos(ImVec2(20, 20));
+	ImGui::Begin("Debug");
+
+	ImGui::End();
+
+	CDebugGui::End();
 	CRenderer::End();
 }
